@@ -1,6 +1,13 @@
-#icon{
+body{
+  background-image: url('images/background.jpeg');
+  background:  auto 0;
+  background-repeat: no-repeat;
+  /* background-position: center center; */
+  color: white;
 
 }
+
+
 h1{
   text-transform: capitalize;
 }

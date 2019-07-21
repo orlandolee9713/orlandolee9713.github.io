@@ -9,7 +9,7 @@ $('button').on('click', (event)=> {
 
   $.ajax({
 
-      url:"http://api.openweathermap.org/data/2.5/weather?APPID=30effaa9e7fc52a8cf6c6665b1d4c130&q=" + cityInput,
+      url:"http://api.openweathermap.org/data/2.5/weather?APPID=30effaa9e7fc52a8cf6c6665b1d4c130&q=" + cityInput + "&units=imperial",
       type: "GET",
 
     }).then(
@@ -42,21 +42,22 @@ $('button').on('click', (event)=> {
         var $weatherDescription = document.getElementById('weather_description');
         var $temperature = document.getElementById('temperature');
         var $humidity = document.getElementById('humidity');
-        var $cityName = document.getElementById('cityName');
+        var $cityName = document.getElementById('cityNameText');
         var $weatherIcon = document.getElementById('icon');
         // console.log($weatherIcon);
         var $windSpeed = document.getElementById('wind');
         $cityName = $('<h1>').text(data.name);
         $('body').append($cityName)
-        $weatherIcon = 'http://openweathermap.org/img/wn/' + data.weather[0].icon + ' @2x.png';
+        $weatherIcon.src = 'http://openweathermap.org/img/wn/' + data.weather[0].icon + '@2x.png';
+        // console.log($weatherIcon);
         $('body').append($weatherIcon);
         $weatherDescription = $('<h1>').text(data.weather[0].description);
         $('body').append($weatherDescription);
-        $temperature = Math.floor(data.main.temp) + '&#176';
+        $temperature = Math.floor(data.main.temp) + '°' + 'F';
         $('body').append($temperature);
-        $windSpeed = 'Winds at ' + Math.floor(data.wind.speed) + 'mph';
+        $windSpeed = $('<p>').text('Wind speed: ' + Math.floor(data.wind.speed) + 'mph');
         $('body').append($windSpeed);
-        $humidity = 'Humidity is at a ' + Math.floor(data.main.humidity);
+        $humidity = 'Humidity levels: ' + Math.floor(data.main.humidity) + '%'
         $('body').append($humidity);
    });
 
