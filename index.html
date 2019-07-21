@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Weather App Project</title>
+    <link rel="stylesheet" href="style.css">
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script src="app.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <!-- input bar  -->
+    <div id="search_bar">
+      <input class="search" type="text" id="input" placeholder="City Name">
+      <!-- search button -->
+      <button class="search" id="search_button">SEARCH</button>
+    </div>
+    <!-- weather container -->
+    <div id="weather_container">
+      <div class="city_name" id="city_name">
+        <h1></h1>
+      </div>
+      <!-- weather description  -->
+      <div id="weather_description">
+        <!-- contains text about the weather -->
+        <h1></h1>
+          <!-- contains icon, temp and description -->
+          <div id="weather_element">
+              <div id="temperature"></div>
+              <div id="description"></div>
+              <div class="icon_image" id="icon"></div>
+          </div>
+          <!-- side details -->
+        <div class="details" id="wind"></div>
+        <div class="details" id="humidity"></div>
+      </div>
+    </div>
+  </body>
+</html>
