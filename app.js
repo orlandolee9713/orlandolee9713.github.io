@@ -5,6 +5,7 @@ $(() => {
 $('button').on('click', (event)=> {
   event.preventDefault();
   const cityInput = $('input[type="text"]').val();
+  $(event.currentTarget).trigger('reset');
   console.log(cityInput);
 
   $.ajax({
