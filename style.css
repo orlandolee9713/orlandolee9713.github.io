@@ -9,9 +9,8 @@ body{
   text-align: center;
   height: 900px;
   width: 100%;
-
 }
-#weatherDiv{
+/* #weatherDiv{
   background-color: rgba(0, 0, 0, 0.25);
   box-shadow: 1px 1px 1px 5px;
   padding: 50px;
@@ -23,7 +22,28 @@ body{
   margin: 5px;
   font-size: 42px;
   font-family: 'Titillium Web', sans-serif;
-}
+} */
+/* Cannot get above code to work at all */
 h1{
   text-transform: capitalize;
+}
+input{
+  width: 300px;
+  height: 20px;
+  text-align: left;
+  font-size: 14px;
+  border: 1px solid gold;
+  background: white;
+  color: black;
+}
+#search_button{
+  /* width: 20px; */
+  height: 20px;
+  border: 1px solid gold;
+  color: black;
+  background: lightgray;
+  font-size: 14px;
+}
+.search:hover{
+  cursor: pointer;
 }

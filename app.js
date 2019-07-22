@@ -1,12 +1,11 @@
 $(() => {
-// let appId = '30effaa9e7fc52a8cf6c6665b1d4c130'
-// const city = $(event.target).val();
+// appId = '30effaa9e7fc52a8cf6c6665b1d4c130'
 
 $('button').on('click', (event)=> {
   event.preventDefault();
   const cityInput = $('input[type="text"]').val();
   $(event.currentTarget).trigger('reset');
-  console.log(cityInput);
+  // console.log(cityInput);
 
   $.ajax({
 
@@ -48,7 +47,7 @@ $('button').on('click', (event)=> {
         // console.log($weatherIcon);
         var $windSpeed = document.getElementById('wind');
         $cityName = $('<h1>').text(data.name);
-        $('body').append($cityName)
+        $('body').append($cityName);
         $weatherIcon.src = 'http://openweathermap.org/img/wn/' + data.weather[0].icon + '@2x.png';
         // console.log($weatherIcon);
         $('body').append($weatherIcon);
@@ -58,7 +57,7 @@ $('button').on('click', (event)=> {
         $('body').append($temperature);
         $windSpeed = $('<p>').text('Wind speed: ' + Math.floor(data.wind.speed) + 'mph');
         $('body').append($windSpeed);
-        $humidity = 'Humidity levels: ' + Math.floor(data.main.humidity) + '%'
+        $humidity = 'Humidity levels: ' + Math.floor(data.main.humidity) + '%';
         $('body').append($humidity);
    });
 
