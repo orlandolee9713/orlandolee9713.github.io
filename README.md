@@ -1,4 +1,5 @@
 https://github.com/orlandolee9713/orlandolee9713.github.io
+Live link: https://orlandolee9713.github.io/
 
 The weather app pretty much explains itself in terms of what information it is
 outputting. But my approach to it was not as easy as it may seem.
