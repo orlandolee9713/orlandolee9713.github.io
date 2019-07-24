@@ -9,7 +9,7 @@ $('button').on('click', (event)=> {
 
   $.ajax({
 
-      url:"http://api.openweathermap.org/data/2.5/weather?APPID=30effaa9e7fc52a8cf6c6665b1d4c130&q=" + cityInput + "&units=imperial",
+      url:"https://api.openweathermap.org/data/2.5/weather?APPID=30effaa9e7fc52a8cf6c6665b1d4c130&q=" + cityInput + "&units=imperial",
       type: "GET",
 
     }).then(
@@ -48,7 +48,7 @@ $('button').on('click', (event)=> {
         var $windSpeed = document.getElementById('wind');
         $cityName = $('<h1>').text(data.name);
         $('body').append($cityName);
-        $weatherIcon.src = 'http://openweathermap.org/img/wn/' + data.weather[0].icon + '@2x.png';
+        $weatherIcon.src = 'https://openweathermap.org/img/wn/' + data.weather[0].icon + '@2x.png';
         // console.log($weatherIcon);
         $('body').append($weatherIcon);
         $weatherDescription = $('<h1>').text(data.weather[0].description);
